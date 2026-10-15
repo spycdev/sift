@@ -1,0 +1,39 @@
+From: Alex Doe <alex@example.com>
+To: Alex Doe <alex@example.com>
+Subject: Fwd: Your Wide World Importers receipt
+Date: Fri, 25 Sep 2026 09:12:00 +0100
+Message-ID: <fwd-1@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="outer-boundary"
+
+--outer-boundary
+Content-Type: text/plain; charset=utf-8
+
+Saving this one for my records.
+
+--outer-boundary
+Content-Type: message/rfc822
+Content-Disposition: attachment; filename="receipt.eml"
+
+From: Wide World Importers <billing@wideworldimporters.example>
+To: Alex Doe <alex@example.com>
+Subject: Your Wide World Importers receipt
+Date: Thu, 24 Sep 2026 16:20:00 +0100
+Message-ID: <wwi-7731@wideworldimporters.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Wide World Importers
+Invoice number: WWI-7731
+Date: 24 September 2026
+
+Ceramic Teapot          £28.00
+Loose Leaf Sampler      £14.50
+
+Subtotal                £42.50
+Delivery                £3.95
+VAT                     £9.29
+Total                   £55.74
+
+--outer-boundary--

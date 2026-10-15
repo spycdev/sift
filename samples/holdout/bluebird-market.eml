@@ -1,0 +1,22 @@
+From: "Bluebird Market" <receipts@bluebirdmarket.example>
+To: Customer <customer@example.com>
+Subject: Receipt BB-77104
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <BB-77104@bluebirdmarket.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+BLUEBIRD MARKET
+Transaction: BB-77104
+Purchased: October 6, 2026
+
+Organic Bananas          1.35 lb @ $0.80/lb       $1.08
+Sourdough Loaf           1 @ $5.49                $5.49
+Free-Range Eggs          1 @ $4.89                $4.89
+Sparkling Water          2 @ $1.25                $2.50
+
+Merchandise subtotal                           $13.96
+Member savings                                -$1.00
+Sales tax                                       $0.72
+Amount charged                                 $13.68

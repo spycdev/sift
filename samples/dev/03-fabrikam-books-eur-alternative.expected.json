@@ -1,0 +1,16 @@
+{
+  "status": "Parsed",
+  "merchant": "Fabrikam Books",
+  "purchasedOn": "2026-09-19",
+  "currency": "EUR",
+  "orderNumber": "FB-55102",
+  "items": [
+    { "description": "The Silent Index (paperback)", "quantity": 1, "unitPrice": 18.90, "lineTotal": 18.90 },
+    { "description": "Field Notes on Rain", "quantity": 2, "unitPrice": 12.50, "lineTotal": 25.00 }
+  ],
+  "adjustments": [],
+  "subtotal": 43.90,
+  "tax": 3.07,
+  "total": 46.97,
+  "warnings": []
+}

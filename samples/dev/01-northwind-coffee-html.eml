@@ -1,0 +1,31 @@
+From: Northwind Coffee <orders@northwindcoffee.example>
+To: Alex Doe <alex@example.com>
+Subject: Your Northwind Coffee receipt
+Date: Mon, 14 Sep 2026 08:02:11 -0700
+Message-ID: <nw-48213@northwindcoffee.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head><title>Receipt</title><style>.total { font-weight: bold; }</style></head>
+<body>
+<div style="display:none; max-height:0; overflow:hidden">Thanks for your order! Earn double stars this week.</div>
+<h1>Thanks for stopping by, Alex!</h1>
+<p>Order #NW-48213</p>
+<p>Order date: September 14, 2026</p>
+<table>
+  <tr><th>Item</th><th>Qty</th><th>Price</th><th>Amount</th></tr>
+  <tr><td>Oat Milk Latte</td><td>2</td><td>$4.50</td><td>$9.00</td></tr>
+  <tr><td>Blueberry Muffin</td><td>1</td><td>$3.25</td><td>$3.25</td></tr>
+  <tr><td>Cold Brew (Large)</td><td>1</td><td>$5.00</td><td>$5.00</td></tr>
+</table>
+<table>
+  <tr><td>Subtotal</td><td>$17.25</td></tr>
+  <tr><td>Sales Tax</td><td>$1.51</td></tr>
+  <tr class="total"><td>Total</td><td>$18.76</td></tr>
+</table>
+<p>Paid with Visa ending in 4242</p>
+<img src="https://tracking.northwindcoffee.example/open.gif" width="1" height="1" alt="">
+</body>
+</html>

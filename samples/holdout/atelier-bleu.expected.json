@@ -1,0 +1,26 @@
+{
+  "status": "Parsed",
+  "merchant": "Atelier Bleu",
+  "purchasedOn": "2026-10-12",
+  "currency": "EUR",
+  "orderNumber": "AB-39017",
+  "items": [
+    {
+      "description": "Carnet relié",
+      "quantity": 2,
+      "unitPrice": 8.4,
+      "lineTotal": 16.8
+    },
+    {
+      "description": "Stylo plume",
+      "quantity": 1,
+      "unitPrice": 24.9,
+      "lineTotal": 24.9
+    }
+  ],
+  "adjustments": [],
+  "subtotal": 41.7,
+  "tax": 8.34,
+  "total": 50.04,
+  "warnings": []
+}

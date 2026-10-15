@@ -1,0 +1,27 @@
+From: "Contoso Electronics Orders" <no-reply@contoso-electronics.example>
+To: Sam Lee <sam@example.com>
+Subject: Order confirmation - Contoso Electronics order CE-2026-10077
+Date: Fri, 02 Oct 2026 14:30:00 -0400
+Message-ID: <ce-2026-10077@contoso-electronics.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hi Sam,
+
+Thanks for shopping with Contoso Electronics. Here are the details of your order.
+
+Order number: CE-2026-10077
+Order date: 2026-10-02
+
+Item                              Qty    Price       Total
+USB-C Cable (2 m)                 3      $12.99      $38.97
+Wireless Mouse                    1      $24.50      $24.50
+
+Subtotal                                             $63.47
+Promo code FALL10                                    -$6.35
+Shipping                                             $5.99
+Tax                                                  $5.10
+Order total (USD)                                    $68.21
+
+Questions? Reply to this email.

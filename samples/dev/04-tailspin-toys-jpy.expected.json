@@ -1,0 +1,16 @@
+{
+  "status": "Parsed",
+  "merchant": "Tailspin Toys",
+  "purchasedOn": "2026-10-06",
+  "currency": "JPY",
+  "orderNumber": "TT-90311",
+  "items": [
+    { "description": "Model Glider Kit", "quantity": 1, "unitPrice": 4800, "lineTotal": 4800 },
+    { "description": "Paper Kite (Dragon)", "quantity": 2, "unitPrice": 3000, "lineTotal": 6000 }
+  ],
+  "adjustments": [],
+  "subtotal": 10800,
+  "tax": 1080,
+  "total": 11880,
+  "warnings": []
+}

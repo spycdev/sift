@@ -1,0 +1,172 @@
+@page
+@model ReviewModel
+@{
+    ViewData["Title"] = "Review receipt";
+    var r = Model.Receipt;
+    var currency = r.Currency?.Value;
+}
+
+<section class="card">
+    <h1>Review receipt</h1>
+    <p class="muted">
+        @if (Model.Import.Result.ExtractorName == IndexModel.ExportExtractorName)
+        {
+            <span>Opened from an encrypted export.</span>
+        }
+        else
+        {
+            <span>Read by <strong>@Model.Import.Result.ExtractorName</strong>.</span>
+        }
+        Check each value against its source; anything you change is marked as edited by you.
+    </p>
+
+    @if (Model.Error is not null)
+    {
+        <div class="warning error">@Model.Error</div>
+    }
+    <partial name="_Warnings" model="Show.General(r)" />
+</section>
+
+<form method="post" class="card">
+    <input type="hidden" asp-for="Id" />
+
+    <h2>Details</h2>
+    <table class="fields">
+        <thead><tr><th>Field</th><th>Value</th><th>Source</th></tr></thead>
+        <tbody>
+            <tr>
+                <th scope="row"><label asp-for="Form.Merchant">Merchant</label></th>
+                <td><input asp-for="Form.Merchant" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.Merchant)</span>
+                    <q class="snippet">@r.Merchant?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.Merchant))" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label asp-for="Form.PurchasedOn">Purchase date</label></th>
+                <td><input asp-for="Form.PurchasedOn" type="date" asp-format="{0:yyyy-MM-dd}" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.PurchasedAt)</span>
+                    <q class="snippet">@r.PurchasedAt?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.PurchasedAt))" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label asp-for="Form.Currency">Currency</label></th>
+                <td><input asp-for="Form.Currency" maxlength="3" placeholder="e.g. USD" class="short" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.Currency)</span>
+                    <q class="snippet">@r.Currency?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.Currency))" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label asp-for="Form.OrderNumber">Order number</label></th>
+                <td><input asp-for="Form.OrderNumber" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.OrderNumber)</span>
+                    <q class="snippet">@r.OrderNumber?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.OrderNumber))" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Items</h2>
+    <table class="items">
+        <thead><tr><th>Description</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Line total</th><th>Source</th></tr></thead>
+        <tbody>
+            @for (var i = 0; i < Model.Form.Items.Count; i++)
+            {
+                var item = i < r.Items.Count ? r.Items[i] : null;
+                <tr class="@(item is null ? "new-row" : "")">
+                    <td><input asp-for="Form.Items[i].Description" placeholder="@(item is null ? "Add an item" : "")" /></td>
+                    <td><input asp-for="Form.Items[i].Quantity" type="number" step="any" class="num" /></td>
+                    <td><input asp-for="Form.Items[i].UnitPrice" type="number" step="any" class="num" /></td>
+                    <td><input asp-for="Form.Items[i].LineTotal" type="number" step="any" class="num" /></td>
+                    <td>
+                        @if (item is not null)
+                        {
+                            <span class="provenance">@Show.Provenance(item.Description)</span>
+                            <q class="snippet">@item.Description.SourceSnippet</q>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p class="hint">Clear an item's description to remove it.</p>
+
+    <h2>Totals</h2>
+    <table class="fields">
+        <tbody>
+            <tr>
+                <th scope="row"><label asp-for="Form.Subtotal">Subtotal</label></th>
+                <td><input asp-for="Form.Subtotal" type="number" step="any" class="num" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.Subtotal)</span>
+                    <q class="snippet">@r.Subtotal?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.Subtotal))" />
+                </td>
+            </tr>
+            @for (var i = 0; i < Model.Form.Adjustments.Count; i++)
+            {
+                var adjustment = i < r.Adjustments.Count ? r.Adjustments[i] : null;
+                <tr class="@(adjustment is null ? "new-row" : "")">
+                    <th scope="row">
+                        <select asp-for="Form.Adjustments[i].Kind" asp-items="Html.GetEnumSelectList<AdjustmentKind>()"></select>
+                        <input asp-for="Form.Adjustments[i].Label" placeholder="Label" class="label" />
+                    </th>
+                    <td><input asp-for="Form.Adjustments[i].Amount" type="number" step="any" class="num" placeholder="@(adjustment is null ? "Add" : "")" /></td>
+                    <td>
+                        @if (adjustment is not null)
+                        {
+                            <span class="provenance">@Show.Provenance(adjustment.Amount)</span>
+                            <q class="snippet">@adjustment.Amount.SourceSnippet</q>
+                        }
+                        else
+                        {
+                            <span class="hint">Discounts are negative.</span>
+                        }
+                    </td>
+                </tr>
+            }
+            <tr>
+                <th scope="row"><label asp-for="Form.Tax">Tax</label></th>
+                <td><input asp-for="Form.Tax" type="number" step="any" class="num" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.Tax)</span>
+                    <q class="snippet">@r.Tax?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.Tax))" />
+                </td>
+            </tr>
+            <tr class="grand">
+                <th scope="row"><label asp-for="Form.Total">Total</label></th>
+                <td><input asp-for="Form.Total" type="number" step="any" class="num" /></td>
+                <td>
+                    <span class="provenance">@Show.Provenance(r.Total)</span>
+                    <q class="snippet">@r.Total?.SourceSnippet</q>
+                    <partial name="_Warnings" model="Show.For(r, nameof(Receipt.Total))" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="hint">Amounts in @(currency ?? "an unknown currency"); use a dot for decimals.</p>
+
+    <div class="actions">
+        <button type="submit" asp-page-handler="Recheck">Re-check</button>
+        <button type="submit" asp-page-handler="Save" class="primary">Save to this computer</button>
+        <button type="submit" asp-page-handler="Discard" formnovalidate class="quiet">Discard</button>
+    </div>
+
+    <fieldset class="export">
+        <legend>Export an encrypted copy</legend>
+        <p class="hint">
+            The file can be opened on any machine with the passphrase. If you forget the passphrase,
+            the export can't be recovered.
+        </p>
+        <input asp-for="Passphrase" type="password" autocomplete="new-password" placeholder="Passphrase (at least 12 characters)" />
+        <button type="submit" asp-page-handler="Export">Export .sift file</button>
+    </fieldset>
+</form>

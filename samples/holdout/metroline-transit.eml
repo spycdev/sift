@@ -1,0 +1,10 @@
+From: "MetroLine Transit" <receipts@metrolinetransit.example>
+To: Customer <customer@example.com>
+Subject: Receipt ML-209831
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <ML-209831@metrolinetransit.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><body><h2>MetroLine Transit — Payment receipt</h2><p>Receipt reference: ML-209831</p><p>Travel date: October 7, 2026</p><table><tr><th>Fare</th><th>Count</th><th>Price each</th></tr><tr><td>Adult single ride</td><td>2</td><td>$2.75</td></tr><tr><td>Airport connection</td><td>1</td><td>$4.50</td></tr></table><p>Fare total: $10.00</p><p>City transit tax: $0.50</p><p><strong>Paid: $10.50 USD</strong></p></body></html>

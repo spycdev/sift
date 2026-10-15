@@ -1,0 +1,104 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Import";
+}
+
+<section class="card">
+    <h1>Import a receipt email</h1>
+    <p class="muted">
+        Save the email from your mail app as an <code>.eml</code> file (up to 5 MB) and upload it here.
+        It's parsed on this computer; nothing is sent anywhere.
+    </p>
+    @if (Model.Model is { } status)
+    {
+        <p class="model-status @(status.Ready ? "ready" : "down")">
+            @if (status.Ready)
+            {
+                <span>Reading receipts with the local model <code>@status.Name</code>.</span>
+            }
+            else
+            {
+                <span>The local model <code>@status.Name</code> isn't available, so the built-in rules will be used. Start Ollama, or run <code>ollama pull @status.Name</code>.</span>
+            }
+        </p>
+    }
+    else
+    {
+        <p class="model-status down">The local model is turned off; receipts are read with the built-in rules.</p>
+    }
+
+    <form method="post" enctype="multipart/form-data" asp-page-handler="Upload" class="upload">
+        <input type="file" name="Upload" accept=".eml,message/rfc822" required />
+        <button type="submit" class="primary">Import</button>
+    </form>
+
+    @if (Model.Error is not null)
+    {
+        <div class="warning error">@Model.Error</div>
+    }
+
+    @if (Model.Rejected is { } rejected)
+    {
+        var classification = rejected.Result.Classification!;
+        <div class="rejected">
+            <p>
+                <strong>This doesn't look like a receipt</strong>
+                (score @classification.Score.ToString("0.00"), threshold 0.50).
+            </p>
+            <ul class="signals">
+                @foreach (var signal in classification.Signals)
+                {
+                    <li>@signal</li>
+                }
+            </ul>
+            <form method="post" asp-page-handler="ParseAnyway">
+                <input type="hidden" name="id" value="@rejected.Id" />
+                <button type="submit">Parse it anyway</button>
+            </form>
+        </div>
+    }
+</section>
+
+<section class="card">
+    <h2>Open an encrypted export</h2>
+    <p class="muted">
+        Decrypt a <code>.sift</code> file exported from Sift. It opens for review, and you can save it to this computer from there.
+    </p>
+    <form method="post" enctype="multipart/form-data" asp-page-handler="OpenExport" class="upload">
+        <input type="file" name="ExportFile" accept=".sift" required />
+        <input type="password" name="Passphrase" autocomplete="current-password" placeholder="Passphrase" required class="passphrase" />
+        <button type="submit">Decrypt and open</button>
+    </form>
+    @if (Model.OpenError is not null)
+    {
+        <div class="warning error">@Model.OpenError</div>
+    }
+</section>
+
+<section class="card">
+    <h2>Saved receipts</h2>
+    @if (Model.Saved.Count == 0)
+    {
+        <p class="muted">No receipts saved yet. Saved receipts are encrypted on this computer.</p>
+    }
+    else
+    {
+        <table class="list">
+            <thead>
+                <tr><th>Merchant</th><th>Purchased</th><th class="num">Total</th><th>Saved</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var receipt in Model.Saved)
+                {
+                    <tr>
+                        <td><a asp-page="/Receipts/Details" asp-route-id="@receipt.Id">@(receipt.Merchant ?? "(unknown merchant)")</a></td>
+                        <td>@Show.Date(receipt.PurchasedAt)</td>
+                        <td class="num">@Show.Money(receipt.Total, receipt.Currency)</td>
+                        <td class="muted">@Show.Date(receipt.SavedAt)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</section>

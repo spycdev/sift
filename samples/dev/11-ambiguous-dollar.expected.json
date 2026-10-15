@@ -1,0 +1,16 @@
+{
+  "status": "Parsed",
+  "merchant": "Lamna Hardware",
+  "purchasedOn": "2026-09-28",
+  "currency": null,
+  "orderNumber": "LH-5521",
+  "items": [
+    { "description": "Wood Screws (box)", "quantity": 2, "unitPrice": 6.25, "lineTotal": 12.50 },
+    { "description": "Sandpaper Assortment", "quantity": 1, "unitPrice": 9.75, "lineTotal": 9.75 }
+  ],
+  "adjustments": [],
+  "subtotal": 22.25,
+  "tax": 1.84,
+  "total": 24.09,
+  "warnings": ["AMBIGUOUS_CURRENCY"]
+}

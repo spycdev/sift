@@ -1,0 +1,20 @@
+From: "Orbit Cloud Services" <receipts@orbitcloud.example>
+To: Customer <customer@example.com>
+Subject: Receipt OC-2026-0914
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <OC-2026-0914@orbitcloud.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+ORBIT CLOUD SERVICES — Payment confirmation
+Invoice: OC-2026-0914
+Billing date: October 14, 2026
+
+Developer plan (monthly)       1      $19.00     $19.00
+Additional storage             1       $4.00      $4.00
+
+Plan charges                                    $23.00
+Tax                                              $0.00
+Total paid                                      $23.00
+Your subscription renews next month.

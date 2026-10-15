@@ -1,0 +1,67 @@
+@page
+@model Sift.Web.Pages.Receipts.DetailsModel
+@{
+    ViewData["Title"] = Model.Receipt?.Merchant?.Value ?? "Receipt";
+    var r = Model.Receipt;
+    var currency = r?.Currency?.Value;
+}
+
+<p><a asp-page="/Index">← All receipts</a></p>
+
+@if (Model.Error is not null)
+{
+    <div class="warning error">@Model.Error</div>
+}
+
+@if (r is not null)
+{
+    <section class="card">
+        <h1>@(r.Merchant?.Value ?? "(unknown merchant)")</h1>
+        <p class="muted">
+            @Show.Date(r.PurchasedAt)
+            @if (r.OrderNumber is not null)
+            {
+                <span>· Order @r.OrderNumber.Value</span>
+            }
+            · @(currency ?? "currency unknown")
+        </p>
+        <partial name="_Warnings" model="r.Warnings" />
+
+        <table class="list">
+            <thead><tr><th>Item</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Line total</th></tr></thead>
+            <tbody>
+                @foreach (var item in r.Items)
+                {
+                    <tr>
+                        <td>@item.Description.Value</td>
+                        <td class="num">@(item.Quantity?.Value.ToString("0.###") ?? "—")</td>
+                        <td class="num">@Show.Money(item.UnitPrice, currency)</td>
+                        <td class="num">@Show.Money(item.LineTotal, currency)</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr><th colspan="3">Subtotal</th><td class="num">@Show.Money(r.Subtotal, currency)</td></tr>
+                @foreach (var adjustment in r.Adjustments)
+                {
+                    <tr><th colspan="3">@adjustment.Label</th><td class="num">@Show.Money(adjustment.Amount, currency)</td></tr>
+                }
+                <tr><th colspan="3">Tax</th><td class="num">@Show.Money(r.Tax, currency)</td></tr>
+                <tr class="grand"><th colspan="3">Total</th><td class="num">@Show.Money(r.Total, currency)</td></tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <form method="post" class="card">
+        <input type="hidden" asp-for="Id" />
+        <fieldset class="export">
+            <legend>Export an encrypted copy</legend>
+            <p class="hint">Readable on any machine with the passphrase. A forgotten passphrase can't be recovered.</p>
+            <input asp-for="Passphrase" type="password" autocomplete="new-password" placeholder="Passphrase (at least 12 characters)" />
+            <button type="submit" asp-page-handler="Export" class="primary">Export .sift file</button>
+        </fieldset>
+        <div class="actions">
+            <button type="submit" asp-page-handler="Delete" class="danger">Delete from this computer</button>
+        </div>
+    </form>
+}

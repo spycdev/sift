@@ -1,0 +1,35 @@
+{
+  "status": "Parsed",
+  "merchant": "Cedar & Stone Home",
+  "purchasedOn": "2026-10-13",
+  "currency": "USD",
+  "orderNumber": "CS-73051",
+  "items": [
+    {
+      "description": "Stoneware Dinner Plate",
+      "quantity": 4,
+      "unitPrice": 8.25,
+      "lineTotal": 33
+    },
+    {
+      "description": "Linen Napkins (set of 2)",
+      "quantity": 2,
+      "unitPrice": 14,
+      "lineTotal": 28
+    }
+  ],
+  "adjustments": [
+    {
+      "kind": "Discount",
+      "amount": -5
+    },
+    {
+      "kind": "Shipping",
+      "amount": 6.5
+    }
+  ],
+  "subtotal": 61,
+  "tax": 4.84,
+  "total": 67.34,
+  "warnings": []
+}

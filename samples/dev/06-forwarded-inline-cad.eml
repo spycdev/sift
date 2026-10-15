@@ -1,0 +1,27 @@
+From: Alex Doe <alex@example.com>
+To: expenses@example.com
+Subject: Fwd: Adventure Works receipt
+Date: Mon, 05 Oct 2026 09:00:00 -0400
+Message-ID: <fwd-2@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+FYI for the expense report.
+
+---------- Forwarded message ---------
+From: Adventure Works <receipts@adventureworks.example.ca>
+Date: Sat, Oct 3, 2026 at 2:41 PM
+Subject: Your Adventure Works receipt
+To: Alex Doe <alex@example.com>
+
+Adventure Works - Receipt
+Transaction date: October 3, 2026
+Receipt #AW-30018
+
+Trail Running Socks    2 x $14.00    $28.00
+Insulated Bottle       1 x $32.00    $32.00
+
+Subtotal    $60.00
+HST         $7.80
+Total       $67.80

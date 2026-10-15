@@ -1,0 +1,10 @@
+From: "Maple Café" <receipts@maplecafe.example>
+To: Customer <customer@example.com>
+Subject: Receipt MC-33019
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <MC-33019@maplecafe.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><body><h1>Maple Café</h1><p>Purchase date: 2026-10-10</p><p>Ticket MC-33019</p><ul><li>2 × Espresso — $3.00 each — $6.00</li><li>1 × Almond Croissant — $4.25</li></ul><div>Subtotal: $10.25</div><div>Tax: $0.82</div><div>Tip: $2.00</div><strong>Card charged: $13.07</strong></body></html>

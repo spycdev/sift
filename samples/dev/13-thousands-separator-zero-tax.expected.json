@@ -1,0 +1,15 @@
+{
+  "status": "Parsed",
+  "merchant": "Coho Winery",
+  "purchasedOn": "2026-09-20",
+  "currency": "USD",
+  "orderNumber": "CW-8812",
+  "items": [
+    { "description": "Reserve Cabernet case", "quantity": 1, "unitPrice": null, "lineTotal": 1250 }
+  ],
+  "adjustments": [],
+  "subtotal": 1250,
+  "tax": 0,
+  "total": 1250,
+  "warnings": []
+}

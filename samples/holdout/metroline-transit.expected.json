@@ -1,0 +1,26 @@
+{
+  "status": "Parsed",
+  "merchant": "MetroLine Transit",
+  "purchasedOn": "2026-10-07",
+  "currency": "USD",
+  "orderNumber": "ML-209831",
+  "items": [
+    {
+      "description": "Adult single ride",
+      "quantity": 2,
+      "unitPrice": 2.75,
+      "lineTotal": 5.5
+    },
+    {
+      "description": "Airport connection",
+      "quantity": 1,
+      "unitPrice": 4.5,
+      "lineTotal": 4.5
+    }
+  ],
+  "adjustments": [],
+  "subtotal": 10,
+  "tax": 0.5,
+  "total": 10.5,
+  "warnings": []
+}

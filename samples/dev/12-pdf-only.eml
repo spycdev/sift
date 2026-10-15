@@ -1,0 +1,23 @@
+From: Trey Research <billing@treyresearch.example>
+To: Alex Doe <alex@example.com>
+Subject: Your invoice from Trey Research
+Date: Fri, 09 Oct 2026 15:00:00 +0000
+Message-ID: <tr-inv-311@treyresearch.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="pdf-boundary"
+
+--pdf-boundary
+Content-Type: text/plain; charset=utf-8
+
+Hi Alex,
+
+Please find your invoice attached. Thank you for your business.
+
+--pdf-boundary
+Content-Type: application/pdf; name="invoice-311.pdf"
+Content-Disposition: attachment; filename="invoice-311.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKJSBTeW50aGV0aWMgcGxhY2Vob2xkZXIsIG5vdCBhIHJlYWwgaW52b2ljZQolJUVPRgo=
+
+--pdf-boundary--

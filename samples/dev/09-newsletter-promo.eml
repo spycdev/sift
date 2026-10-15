@@ -1,0 +1,18 @@
+From: Northwind Coffee <news@northwindcoffee.example>
+To: Alex Doe <alex@example.com>
+Subject: Fall flavors are here - 20% off this weekend
+Date: Thu, 08 Oct 2026 07:00:00 -0700
+Message-ID: <promo-fall@northwindcoffee.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<h1>Fall flavors are here</h1>
+<p>Pumpkin Spice Latte, now just $4.95</p>
+<p>Maple Cold Brew, $5.25</p>
+<p>Use code FALL20 for 20% off this weekend.</p>
+<p><a href="https://northwindcoffee.example/shop">Shop now</a></p>
+<p><a href="https://northwindcoffee.example/unsubscribe">Unsubscribe</a></p>
+<img src="https://tracking.northwindcoffee.example/promo.gif" width="1" height="1" alt="">
+</body></html>

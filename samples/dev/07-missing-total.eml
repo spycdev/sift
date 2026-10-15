@@ -1,0 +1,21 @@
+From: Litware Supplies <orders@litware.example>
+To: Alex Doe <alex@example.com>
+Subject: Your Litware order receipt
+Date: Wed, 30 Sep 2026 10:00:00 +0000
+Message-ID: <lw-2210@litware.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Litware Supplies
+Order #LW-2210
+Order date: September 30, 2026
+
+Printer Paper (500 sheets)   2   $8.99   $17.98
+Gel Pens (12 pack)           1   $6.49   $6.49
+
+Subtotal   $24.47
+Tax        $1.96
+
+All prices in USD. Your card will be charged when your order ships.
+Questions? Reply to this email.

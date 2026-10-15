@@ -1,0 +1,19 @@
+From: "Atelier Bleu" <receipts@atelierbleu.example>
+To: Customer <customer@example.com>
+Subject: Receipt AB-39017
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <AB-39017@atelierbleu.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+ATELIER BLEU — Reçu de commande
+Commande : AB-39017
+Date d’achat : 12 octobre 2026
+
+Carnet relié                 2 x 8,40 €       16,80 €
+Stylo plume                  1 x 24,90 €      24,90 €
+
+Sous-total                                    41,70 €
+TVA                                            8,34 €
+Total TTC                                     50,04 €

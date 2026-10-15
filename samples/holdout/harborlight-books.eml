@@ -1,0 +1,26 @@
+From: "Harborlight Books" <receipts@harborlightbooks.example>
+To: Customer <customer@example.com>
+Subject: Receipt HL-60128
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <HL-60128@harborlightbooks.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Thanks for ordering from Harborlight Books.
+Order ID: HL-60128
+Order date: October 8, 2026
+
+The Glass Orchard
+  Qty: 1
+  Price: $16.00
+
+Maps of Quiet Places
+  Qty: 2
+  Price: $11.50 each
+
+Merchandise: $39.00
+Shipping: $0.00
+Tax: $3.12
+Grand total: $42.12
+All prices in USD.

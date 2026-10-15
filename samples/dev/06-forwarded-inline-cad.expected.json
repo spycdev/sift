@@ -1,0 +1,16 @@
+{
+  "status": "Parsed",
+  "merchant": "Adventure Works",
+  "purchasedOn": "2026-10-03",
+  "currency": "CAD",
+  "orderNumber": "AW-30018",
+  "items": [
+    { "description": "Trail Running Socks", "quantity": 2, "unitPrice": 14.00, "lineTotal": 28.00 },
+    { "description": "Insulated Bottle", "quantity": 1, "unitPrice": 32.00, "lineTotal": 32.00 }
+  ],
+  "adjustments": [],
+  "subtotal": 60.00,
+  "tax": 7.80,
+  "total": 67.80,
+  "warnings": []
+}

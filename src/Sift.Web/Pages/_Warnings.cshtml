@@ -1,0 +1,7 @@
+@model IEnumerable<ValidationWarning>
+@foreach (var warning in Model)
+{
+    <div class="warning @Show.Severity(warning.Severity)">
+        <span class="code">@warning.Code</span> @warning.Message
+    </div>
+}

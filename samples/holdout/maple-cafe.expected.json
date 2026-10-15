@@ -1,0 +1,31 @@
+{
+  "status": "Parsed",
+  "merchant": "Maple Café",
+  "purchasedOn": "2026-10-10",
+  "currency": "USD",
+  "orderNumber": "MC-33019",
+  "items": [
+    {
+      "description": "Espresso",
+      "quantity": 2,
+      "unitPrice": 3,
+      "lineTotal": 6
+    },
+    {
+      "description": "Almond Croissant",
+      "quantity": 1,
+      "unitPrice": 4.25,
+      "lineTotal": 4.25
+    }
+  ],
+  "adjustments": [
+    {
+      "kind": "Tip",
+      "amount": 2
+    }
+  ],
+  "subtotal": 10.25,
+  "tax": 0.82,
+  "total": 13.07,
+  "warnings": []
+}

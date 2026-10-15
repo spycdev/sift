@@ -1,0 +1,31 @@
+{
+  "status": "Parsed",
+  "merchant": "Harborlight Books",
+  "purchasedOn": "2026-10-08",
+  "currency": "USD",
+  "orderNumber": "HL-60128",
+  "items": [
+    {
+      "description": "The Glass Orchard",
+      "quantity": 1,
+      "unitPrice": 16,
+      "lineTotal": 16
+    },
+    {
+      "description": "Maps of Quiet Places",
+      "quantity": 2,
+      "unitPrice": 11.5,
+      "lineTotal": 23
+    }
+  ],
+  "adjustments": [
+    {
+      "kind": "Shipping",
+      "amount": 0
+    }
+  ],
+  "subtotal": 39,
+  "tax": 3.12,
+  "total": 42.12,
+  "warnings": []
+}

@@ -1,0 +1,19 @@
+{
+  "status": "Parsed",
+  "merchant": "Contoso Electronics",
+  "purchasedOn": "2026-10-02",
+  "currency": "USD",
+  "orderNumber": "CE-2026-10077",
+  "items": [
+    { "description": "USB-C Cable (2 m)", "quantity": 3, "unitPrice": 12.99, "lineTotal": 38.97 },
+    { "description": "Wireless Mouse", "quantity": 1, "unitPrice": 24.50, "lineTotal": 24.50 }
+  ],
+  "adjustments": [
+    { "kind": "Discount", "amount": -6.35 },
+    { "kind": "Shipping", "amount": 5.99 }
+  ],
+  "subtotal": 63.47,
+  "tax": 5.10,
+  "total": 68.21,
+  "warnings": []
+}

@@ -1,0 +1,10 @@
+From: "Cedar & Stone Home" <receipts@cedarstone.example>
+To: Customer <customer@example.com>
+Subject: Receipt CS-73051
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <CS-73051@cedarstone.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><body><p>Thanks for choosing Cedar &amp; Stone Home.</p><p>Order CS-73051 · Placed October 13, 2026</p><table><tr><td>Stoneware Dinner Plate</td><td>4</td><td>$8.25</td><td>$33.00</td></tr><tr><td>Linen Napkins (set of 2)</td><td>2</td><td>$14.00</td><td>$28.00</td></tr></table><p>Items: $61.00</p><p>Bundle offer: -$5.00</p><p>Delivery: $6.50</p><p>Tax: $4.84</p><p>Total charged: $67.34</p></body></html>

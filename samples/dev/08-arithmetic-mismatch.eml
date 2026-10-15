@@ -1,0 +1,22 @@
+From: Proseware Cafe <hello@prosewarecafe.example>
+To: Alex Doe <alex@example.com>
+Subject: Receipt from Proseware Cafe
+Date: Thu, 01 Oct 2026 12:30:00 -0500
+Message-ID: <pc-1187@prosewarecafe.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Proseware Cafe
+Receipt #PC-1187
+Date: Oct 1, 2026
+
+Turkey Club Sandwich    $11.50
+Iced Tea                $3.00
+
+Subtotal    $14.50
+Tax         $1.20
+Tip         $2.50
+Total       $19.20
+
+All amounts in USD.

@@ -1,0 +1,21 @@
+From: Tailspin Toys <receipts@tailspintoys.example>
+To: Alex Doe <alex@example.com>
+Subject: Receipt for your purchase at Tailspin Toys
+Date: Tue, 06 Oct 2026 19:45:00 +0900
+Message-ID: <tt-90311@tailspintoys.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<p>Thank you for shopping at Tailspin Toys.</p>
+<p>Receipt No. TT-90311</p>
+<p>Purchase date: 2026/10/06</p>
+<table>
+  <tr><td>Model Glider Kit</td><td>1</td><td>¥4,800</td><td>¥4,800</td></tr>
+  <tr><td>Paper Kite (Dragon)</td><td>2</td><td>¥3,000</td><td>¥6,000</td></tr>
+  <tr><td>Subtotal</td><td></td><td></td><td>¥10,800</td></tr>
+  <tr><td>Consumption tax (10%)</td><td></td><td></td><td>¥1,080</td></tr>
+  <tr><td>Total</td><td></td><td></td><td>¥11,880</td></tr>
+</table>
+</body></html>

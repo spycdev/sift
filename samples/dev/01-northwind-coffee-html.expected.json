@@ -1,0 +1,17 @@
+{
+  "status": "Parsed",
+  "merchant": "Northwind Coffee",
+  "purchasedOn": "2026-09-14",
+  "currency": "USD",
+  "orderNumber": "NW-48213",
+  "items": [
+    { "description": "Oat Milk Latte", "quantity": 2, "unitPrice": 4.50, "lineTotal": 9.00 },
+    { "description": "Blueberry Muffin", "quantity": 1, "unitPrice": 3.25, "lineTotal": 3.25 },
+    { "description": "Cold Brew (Large)", "quantity": 1, "unitPrice": 5.00, "lineTotal": 5.00 }
+  ],
+  "adjustments": [],
+  "subtotal": 17.25,
+  "tax": 1.51,
+  "total": 18.76,
+  "warnings": []
+}

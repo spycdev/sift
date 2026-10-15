@@ -1,0 +1,26 @@
+{
+  "status": "Parsed",
+  "merchant": "Orbit Cloud Services",
+  "purchasedOn": "2026-10-14",
+  "currency": "USD",
+  "orderNumber": "OC-2026-0914",
+  "items": [
+    {
+      "description": "Developer plan (monthly)",
+      "quantity": 1,
+      "unitPrice": 19,
+      "lineTotal": 19
+    },
+    {
+      "description": "Additional storage",
+      "quantity": 1,
+      "unitPrice": 4,
+      "lineTotal": 4
+    }
+  ],
+  "adjustments": [],
+  "subtotal": 23,
+  "tax": 0,
+  "total": 23,
+  "warnings": []
+}

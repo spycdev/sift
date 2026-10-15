@@ -1,0 +1,17 @@
+From: Coho Winery <orders@cohowinery.example>
+To: Alex Doe <alex@example.com>
+Subject: Order confirmation from Coho Winery
+Date: Sun, 20 Sep 2026 13:00:00 -0700
+Message-ID: <cw-8812@cohowinery.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Coho Winery
+Order number: CW-8812
+Order date: 2026-09-20
+Currency: USD
+
+Reserve Cabernet case    1    $1,250
+Subtotal    $1,250
+Tax    $0
+Total    $1,250

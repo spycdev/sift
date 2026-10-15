@@ -1,0 +1,43 @@
+{
+  "status": "Parsed",
+  "merchant": "Bluebird Market",
+  "purchasedOn": "2026-10-06",
+  "currency": "USD",
+  "orderNumber": "BB-77104",
+  "items": [
+    {
+      "description": "Organic Bananas",
+      "quantity": 1.35,
+      "unitPrice": 0.8,
+      "lineTotal": 1.08
+    },
+    {
+      "description": "Sourdough Loaf",
+      "quantity": 1,
+      "unitPrice": 5.49,
+      "lineTotal": 5.49
+    },
+    {
+      "description": "Free-Range Eggs",
+      "quantity": 1,
+      "unitPrice": 4.89,
+      "lineTotal": 4.89
+    },
+    {
+      "description": "Sparkling Water",
+      "quantity": 2,
+      "unitPrice": 1.25,
+      "lineTotal": 2.5
+    }
+  ],
+  "adjustments": [
+    {
+      "kind": "Discount",
+      "amount": -1
+    }
+  ],
+  "subtotal": 13.96,
+  "tax": 0.72,
+  "total": 13.68,
+  "warnings": []
+}

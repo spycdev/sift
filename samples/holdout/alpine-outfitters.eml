@@ -1,0 +1,23 @@
+From: "Alpine Outfitters" <receipts@alpineoutfitters.example>
+To: Customer <customer@example.com>
+Subject: Receipt AO-88419
+Date: Thu, 15 Oct 2026 10:30:00 -0700
+Message-ID: <AO-88419@alpineoutfitters.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+ALPINE OUTFITTERS — ORDER CONFIRMATION
+Reference AO-88419
+Order placed: 11 October 2026
+
+Description                  Units   Unit cost   Extended
+Trail Bottle - 750 ml          2       $18.00      $36.00
+Merino Hiking Socks            3        $9.50      $28.50
+Packable Rain Shell            1       $74.95      $74.95
+
+Items total                                     $139.45
+WELCOME15                                       -$15.00
+Delivery                                          $8.00
+Sales tax                                         $9.91
+TOTAL PAID                                      $142.36

@@ -1,0 +1,43 @@
+From: Fabrikam Books <shop@fabrikam-books.example>
+To: Alex Doe <alex@example.com>
+Subject: Your receipt from Fabrikam Books (order FB-55102)
+Date: Sat, 19 Sep 2026 11:15:00 +0200
+Message-ID: <fb-55102@fabrikam-books.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="alt-boundary"
+
+--alt-boundary
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Fabrikam Books - Receipt
+
+Order: FB-55102
+Date: 19 September 2026
+
+The Silent Index (paperback)    1 x 18,90 €    18,90 €
+Field Notes on Rain             2 x 12,50 €    25,00 €
+
+Subtotal    43,90 €
+VAT (7%)    3,07 €
+Total       46,97 €
+
+--alt-boundary
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<h2>Fabrikam Books &ndash; Receipt</h2>
+<p>Order: FB-55102<br>Date: 19 September 2026</p>
+<table>
+  <tr><td>The Silent Index (paperback)</td><td>1 x 18,90&nbsp;€</td><td>18,90&nbsp;€</td></tr>
+  <tr><td>Field Notes on Rain</td><td>2 x 12,50&nbsp;€</td><td>25,00&nbsp;€</td></tr>
+</table>
+<table>
+  <tr><td>Subtotal</td><td>43,90&nbsp;€</td></tr>
+  <tr><td>VAT (7%)</td><td>3,07&nbsp;€</td></tr>
+  <tr><td><b>Total</b></td><td><b>46,97&nbsp;€</b></td></tr>
+</table>
+</body></html>
+
+--alt-boundary--

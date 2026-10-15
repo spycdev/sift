@@ -1,0 +1,18 @@
+{
+  "status": "Parsed",
+  "merchant": "Wide World Importers",
+  "purchasedOn": "2026-09-24",
+  "currency": "GBP",
+  "orderNumber": "WWI-7731",
+  "items": [
+    { "description": "Ceramic Teapot", "quantity": null, "unitPrice": null, "lineTotal": 28.00 },
+    { "description": "Loose Leaf Sampler", "quantity": null, "unitPrice": null, "lineTotal": 14.50 }
+  ],
+  "adjustments": [
+    { "kind": "Shipping", "amount": 3.95 }
+  ],
+  "subtotal": 42.50,
+  "tax": 9.29,
+  "total": 55.74,
+  "warnings": []
+}

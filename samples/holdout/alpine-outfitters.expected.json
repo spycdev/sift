@@ -1,0 +1,41 @@
+{
+  "status": "Parsed",
+  "merchant": "Alpine Outfitters",
+  "purchasedOn": "2026-10-11",
+  "currency": "USD",
+  "orderNumber": "AO-88419",
+  "items": [
+    {
+      "description": "Trail Bottle - 750 ml",
+      "quantity": 2,
+      "unitPrice": 18,
+      "lineTotal": 36
+    },
+    {
+      "description": "Merino Hiking Socks",
+      "quantity": 3,
+      "unitPrice": 9.5,
+      "lineTotal": 28.5
+    },
+    {
+      "description": "Packable Rain Shell",
+      "quantity": 1,
+      "unitPrice": 74.95,
+      "lineTotal": 74.95
+    }
+  ],
+  "adjustments": [
+    {
+      "kind": "Discount",
+      "amount": -15
+    },
+    {
+      "kind": "Shipping",
+      "amount": 8
+    }
+  ],
+  "subtotal": 139.45,
+  "tax": 9.91,
+  "total": 142.36,
+  "warnings": []
+}

@@ -1,0 +1,16 @@
+{
+  "status": "Parsed",
+  "merchant": "Litware Supplies",
+  "purchasedOn": "2026-09-30",
+  "currency": "USD",
+  "orderNumber": "LW-2210",
+  "items": [
+    { "description": "Printer Paper (500 sheets)", "quantity": 2, "unitPrice": 8.99, "lineTotal": 17.98 },
+    { "description": "Gel Pens (12 pack)", "quantity": 1, "unitPrice": 6.49, "lineTotal": 6.49 }
+  ],
+  "adjustments": [],
+  "subtotal": 24.47,
+  "tax": 1.96,
+  "total": null,
+  "warnings": ["MISSING_FIELD"]
+}
